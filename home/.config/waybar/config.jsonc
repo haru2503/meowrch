@@ -11,7 +11,10 @@
     //==> Modules Layout
     ///////////////////////////////////////////////////////////////
 	"modules-left": [
-		"custom/l_end","tray","custom/r_end","custom/l_end","hyprland/workspaces","custom/r_end","custom/l_end","wlr/taskbar","custom/r_end","custom/padd"
+		"custom/l_end","tray","custom/r_end",
+        "custom/l_end","hyprland/workspaces","custom/r_end",
+        "custom/l_end","wlr/taskbar","custom/r_end","custom/padd",
+        "custom/media"
 	],
 	"modules-center": [
 		"group/system-info"
@@ -86,6 +89,15 @@
 
     //==> Middle Modules
     ///////////////////////////////////////////////////////////////
+    "custom/media": {
+        "format": "{text}",
+        "format-alt": "{}",
+        "exec": "~/bin/media.sh",
+        "interval": 5,
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl next"
+    },
     "custom/cpu": {
 		"exec": "python ~/bin/system-info.py --cpu --normal-color \"#f5c2e7\" --critical-color \"#f38ba8\" | cat",
 		"on-click": "python ~/bin/system-info.py --cpu --click",
