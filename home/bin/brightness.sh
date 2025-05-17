@@ -12,18 +12,16 @@
 SESSION_TYPE="$XDG_SESSION_TYPE"
 DEFAULT_COLOR="#61afef"
 
-get_backlight_device() {
+gget_backlight_device() {
     local devices=$(ls /sys/class/backlight/)
     if [ -z "$devices" ]; then
         echo "none"
     else
-        local name_device=$(echo $devices | awk '{print $1}') 
-        local status=$(cat /sys/class/backlight/$name_device/device/enabled)
-
-        if [[ "$status" == "disabled" ]]; then
-            echo "none"
-        else
+        local name_device=$(echo $devices | awk '{print $1}')
+        if [ -d "/sys/class/backlight/$name_device" ]; then
             echo $name_device
+        else
+            echo "none"
         fi
     fi
 }
