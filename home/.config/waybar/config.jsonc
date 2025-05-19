@@ -11,10 +11,7 @@
     //==> Modules Layout
     ///////////////////////////////////////////////////////////////
 	"modules-left": [
-		"custom/l_end","tray","custom/r_end",
-        "custom/l_end","hyprland/workspaces","custom/r_end",
-        "custom/l_end","wlr/taskbar","custom/r_end","custom/padd",
-        "custom/media"
+		"custom/l_end","tray","custom/r_end","custom/l_end","hyprland/workspaces","custom/r_end","custom/l_end","wlr/taskbar","custom/r_end","custom/padd"
 	],
 	"modules-center": [
 		"group/system-info"
@@ -89,15 +86,6 @@
 
     //==> Middle Modules
     ///////////////////////////////////////////////////////////////
-    "custom/media": {
-        "format": "{text}",
-        "format-alt": "{}",
-        "exec": "~/bin/media.sh",
-        "interval": 5,
-        "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-click-right": "playerctl next"
-    },
     "custom/cpu": {
 		"exec": "python ~/bin/system-info.py --cpu --normal-color \"#f5c2e7\" --critical-color \"#f38ba8\" | cat",
 		"on-click": "python ~/bin/system-info.py --cpu --click",
@@ -128,9 +116,9 @@
     //==> Right Modules
     ///////////////////////////////////////////////////////////////
     "clock": {
-        "format": "{:%H:%M %p | 󰃭 %d·%m·%y}",
+        "format": "{:%H:%M %p}",
         "rotate": 0,
-        "format-alt": "{:%H:%M %p}",
+        "format-alt": "{:%R | 󰃭 %d·%m·%y}",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "month",

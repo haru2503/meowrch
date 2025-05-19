@@ -153,13 +153,3 @@ tooltip {
     background: @main-bg;
     margin: 4px 0px 4px 0px;
 }
-
-#custom-media {
-    background: @main-bg;
-    color: @main-fg;
-    padding: 0px 12px;
-    margin: 4px 0px;
-    border-radius: 12px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
