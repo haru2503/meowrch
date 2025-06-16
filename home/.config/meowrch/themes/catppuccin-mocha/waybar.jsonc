@@ -116,9 +116,10 @@
     //==> Right Modules
     ///////////////////////////////////////////////////////////////
     "clock": {
-        "format": "{:%H:%M %p}",
+        "format": "{:%H:%M:%S | 󰃭 %d·%m·%y}",
         "rotate": 0,
-        "format-alt": "{:%R | 󰃭 %d·%m·%y}",
+        "format-alt": "{:%R %p}",
+        "interval": 1,
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "month",
