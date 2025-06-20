@@ -541,3 +541,8 @@ cython_debug/
 ##==> Meowrch ignores
 ########################################
 backup/
+
+##==> Custom
+home/bin/custom/defense
+.gitignore
+.gitignore
